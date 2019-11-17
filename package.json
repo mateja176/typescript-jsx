@@ -8,7 +8,7 @@
     "compile": "cross-env DOTENV_CONFIG_PATH=.env babel-node -r preload.js src/index.tsx -x .ts,.tsx,.jsx",
     "run": "cross-env DOTENV_CONFIG_PATH=.env node -r module-alias/register -r dotenv/config -r @babel/register src/index.tsx",
     "watch": "cross-env DOTENV_CONFIG_PATH=.env nodemon --exec 'node -r module-alias/register -r dotenv/config -r @babel/register' src/index.tsx",
-    "dev": "cross-env DOTENV_CONFIG_PATH=.env node -r ./preload.js bootstrap.js"
+    "dev": "cross-env DOTENV_CONFIG_PATH=.env node -r module-alias/register -r dotenv/config bootstrap.js"
   },
   "keywords": [],
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
