@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env DOTENV_CONFIG_PATH=.env ts-node -P src/tsconfig.json -r module-alias/register -r ignore-styles -r dotenv/config src/index.tsx",
-    "compile": "cross-env DOTENV_CONFIG_PATH=.env babel-node -r ./node_modules/module-alias/register -r ./node_modules/dotenv/config src/index.tsx -x .ts,.tsx,.jsx"
+    "compile": "cross-env DOTENV_CONFIG_PATH=.env babel-node -r preload.js src/index.tsx -x .ts,.tsx,.jsx",
+    "run": "cross-env DOTENV_CONFIG_PATH=.env node -r module-alias/register -r dotenv/config -r @babel/register src/index.tsx",
+    "dev": "cross-env DOTENV_CONFIG_PATH=.env nodemon --exec 'node -r module-alias/register -r dotenv/config -r @babel/register' src/index.tsx"
   },
   "keywords": [],
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
@@ -22,6 +24,7 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
+    "@babel/register": "^7.7.0",
     "@types/node": "^12.12.8",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
@@ -29,6 +32,7 @@
     "dotenv": "^8.2.0",
     "ignore-styles": "^5.0.1",
     "module-alias": "^2.2.2",
+    "nodemon": "^1.19.4",
     "ts-node": "^8.5.2",
     "typescript": "^3.7.2"
   },
