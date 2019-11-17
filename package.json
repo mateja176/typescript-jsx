@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -P src/tsconfig.json src/index.tsx"
+    "start": "ts-node -P src/tsconfig.json src/index.tsx",
+    "compile": "babel-node --config-file .babelrc src/index.tsx"
   },
   "keywords": [],
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
@@ -14,6 +15,10 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "ts-node": "^8.5.2",
