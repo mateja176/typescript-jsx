@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node -P src/tsconfig.json -r module-alias/register src/index.tsx",
-    "compile": "babel-node -r ./node_modules/module-alias/register src/index.tsx -x .ts,.tsx"
+    "compile": "babel-node -r ./node_modules/module-alias/register src/index.tsx -x .ts,.tsx,.jsx"
   },
   "keywords": [],
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
