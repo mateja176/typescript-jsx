@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node -P src/tsconfig.json -r module-alias/register src/index.tsx",
-    "compile": "babel-node --config-file .babelrc -r module-alias/register src/index.tsx"
+    "compile": "babel-node -r ./node_modules/module-alias/register src/index.jsx"
   },
   "keywords": [],
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
@@ -17,11 +17,11 @@
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.7.0",
     "@babel/plugin-transform-react-jsx": "^7.7.0",
     "@babel/plugin-transform-typescript": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.2",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "module-alias": "^2.2.2",
